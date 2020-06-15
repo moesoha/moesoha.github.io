@@ -51,12 +51,12 @@ html, body {
 	border-right: none;
 }
 .container > .main {
-	padding: 0 3rem;
+	padding: 1rem 3rem;
 	line-height: 1.5;
 	color: #333;
 }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
 	.container > .side {
 		height: unset;
 		width: 216px;
@@ -80,20 +80,62 @@ html, body {
 	}
 }
 
+@media not print {
+	.show-on-print {
+		display: none!important;
+	}
+}
+
+@media print {
+	html, body {
+		font-size: 12px;
+	}
+
+	.hide-on-print {
+		display: none!important;
+	}
+
+	.container {
+		max-width: unset;
+		margin: 0;
+	}
+
+	.container > .side {
+		height: unset;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		border-bottom: 2px solid #ccc;
+		padding-top: 0;
+		padding-bottom: 1rem;
+	}
+	
+	.container > .side > *:first-child {
+		padding-left: 5rem;
+	}
+	.container > .side > *:last-child {
+		padding-right: 5rem;
+	}
+
+	.container > .main {
+		line-height: 1.2;
+	}
+}
+
 h1 { font-size: 1.85rem; }
 h2 { font-size: 1.5rem; }
 h3 { font-size: 1.2rem; }
 h4 { font-size: 1.1rem; }
 h5 { font-size: 1rem; }
 h6 { font-size: .875rem; }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p, ul {
 	margin: .8em 0;
 }
-h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, ul:first-child, p:first-child, ul > li:first-child {
 	margin-top: 0;
 	padding-top: 0;
 }
-h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, ul:last-child, p:last-child, ul > li:last-child {
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
@@ -153,4 +195,28 @@ img.fa {
 	display: flex;
 	justify-content: space-between;
 	font-size: .75rem;
+}
+
+@media print {
+	h1, h2, h3, h4, h5, h6 {
+		margin: .3em 0;
+	}
+	p {
+		margin: .375em 0;
+	}
+	li {
+		margin: .1em 0;
+	}
+
+	.contacts {
+		margin: 0;
+		font-size: 1rem;
+	}
+	.contacts > * {
+		padding-top: 0;
+	}
+
+	.more-link, .avatar {
+		display: none!important;
+	}
 }
