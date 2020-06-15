@@ -16,8 +16,7 @@ const compileMarkdown = () => src('./*.html')
 			const markdownElements = $('.markdown').map((_, e) => e).get();
 			for(let i in markdownElements) {
 				const e = markdownElements[i];
-				const html = await marked($(e).text().trim());
-				$(e).html(html);
+				$(e).html(await marked($(e).html().trim()));
 			}
 			file.contents = Buffer.from($.html());
 			callback(null, file);
