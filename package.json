@@ -5,15 +5,17 @@
   "license": "MIT",
   "scripts": {
     "build": "gulp",
-	"clean": "gulp clean",
-	"tasks": "gulp --tasks"
+    "clean": "gulp clean",
+    "tasks": "gulp --tasks"
   },
   "devDependencies": {
     "cheerio": "^1.0.0-rc.3",
     "font-spider": "^1.3.5",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-font-spider": "^0.3.6",
+    "gulp-htmlmin": "^5.0.1",
     "marked": "^1.1.0",
     "through2": "^3.0.1"
   }

@@ -1,5 +1,7 @@
 const { src, dest, series, parallel } = require('gulp');
 const gulpFontSpider = require('gulp-font-spider');
+const gulpCSSMinify = require('gulp-clean-css');
+const gulpHTMLMinify = require('gulp-htmlmin');
 const clean = require('gulp-clean');
 const marked = require('marked');
 const cheerio = require('cheerio');
@@ -28,8 +30,10 @@ const compileMarkdown = () => src('./*.html')
 ;
 const fontSpider = () => src('./dist/*.html')
 	.pipe(gulpFontSpider({ silent: false }))
-	.pipe(dest('./dist/'));
-const cleanUpFonts = () => src('./dist/**/.font-spider', { read: false }).pipe(clean());
+	.pipe(dest('./dist/'))
+;
+const cssMinify = () => src('./dist/assets/*.css').pipe(gulpCSSMinify({ compatibility: 'ie8' })).pipe(dest('./dist/assets/'));
+const htmlMinify = () => src('./dist/*.html').pipe(gulpHTMLMinify({ collapseWhitespace: true })).pipe(dest('./dist/'));
 
 exports.default = series(
 	parallel(
@@ -38,7 +42,11 @@ exports.default = series(
 		compileMarkdown
 	),
 	fontSpider,
-	cleanUpOriginalFonts
+	cleanUpOriginalFonts,
+	parallel(
+		cssMinify,
+		htmlMinify
+	)
 )
 
 exports.clean = cleanUpPreviousBuild
