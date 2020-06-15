@@ -25,14 +25,15 @@ jobs:
     
       - name: Prepare two language versions
         run: |
-          cp -vr dist page-en
-          cp -vr dist page-zh
+          cp -vr dist page-en && cp -vr dist page-zh
           cd page-en
           rm index.zh.html && mv index.en.html index.html
           cd ..
           cd page-zh
           rm index.en.html && mv index.zh.html index.html
           cd ..
+          echo "Files are prepared."
+          ls -lah dist page-en page-zh
     
       - name: Deploy Chinese version
         uses: JamesIves/github-pages-deploy-action@3.5.5
