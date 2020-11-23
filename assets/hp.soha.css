@@ -157,12 +157,9 @@ li > * > li {
 	margin: .125em 0;
 }
 
-img.fa {
-	width: 1em;
-	height: 1em;
-	vertical-align: bottom;
-	color: #888;
-	margin-right: .75em;
+.fas, .fab {
+	color: #333;
+	margin-right: .15em;
 }
 
 .more-link {

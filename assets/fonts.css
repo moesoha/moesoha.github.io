@@ -58,6 +58,8 @@
 	font-variant: normal;
 	text-rendering: auto;
 	line-height: 1;
+	text-align: center;
+    width: 1.25em;
 }
 .fas {
 	font-family: 'Font Awesome 5 Free';
@@ -76,3 +78,4 @@
 .fa-key:before { content: "\f084"; }
 .fa-telegram:before { content: "\f2c6"; }
 .fa-twitter:before { content: "\f099"; }
+.fa-broadcast-tower:before { content: "\f519"; }
