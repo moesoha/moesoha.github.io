@@ -15,11 +15,11 @@ jobs:
           persist-credentials: false
 
       - name: Yarn install
-        uses: borales/actions-yarn@v2.0.0
+        uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install
       - name: Yarn build
-        uses: borales/actions-yarn@v2.0.0
+        uses: borales/actions-yarn@v2.3.0
         with:
           cmd: build
     
@@ -36,14 +36,14 @@ jobs:
           ls -lah dist page-en page-zh
     
       - name: Deploy Chinese version
-        uses: JamesIves/github-pages-deploy-action@3.5.5
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           REPOSITORY_NAME: moesoha/moesoha.github.io
           BRANCH: master
           FOLDER: page-zh
       - name: Deploy English version
-        uses: JamesIves/github-pages-deploy-action@3.5.5
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           REPOSITORY_NAME: moesoha/sohaj.in
