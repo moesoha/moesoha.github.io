@@ -16,7 +16,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-font-spider": "^0.3.6",
     "gulp-htmlmin": "^5.0.1",
-    "marked": "^1.1.0",
-    "through2": "^3.0.1"
+    "marked": "^1.2.5",
+    "through2": "^4.0.2"
   }
 }
