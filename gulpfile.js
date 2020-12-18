@@ -9,7 +9,8 @@ const through = require('through2');
 
 const cleanUpPreviousBuild = () => src('./dist', { read: false }).pipe(clean());
 const cleanUpOriginalFonts = () => src('./dist/**/.font-spider', { read: false }).pipe(clean());
-const copyPublicFiles = () => src('./assets/**').pipe(dest('./dist/assets/'));
+const copyPublicFiles = () => src('./public/**').pipe(dest('./dist/'));
+const copyAssets = () => src('./assets/**').pipe(dest('./dist/assets/'));
 const copyFonts = () => src('./fonts/**').pipe(dest('./dist/fonts/'));
 const compileMarkdown = () => src('./*.html')
 	.pipe(through.obj(async (file, _, callback) => {
@@ -37,8 +38,9 @@ const htmlMinify = () => src('./dist/*.html').pipe(gulpHTMLMinify({ collapseWhit
 
 exports.default = series(
 	parallel(
-		copyPublicFiles,
+		copyAssets,
 		copyFonts,
+		copyPublicFiles,
 		compileMarkdown
 	),
 	fontSpider,
