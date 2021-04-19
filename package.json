@@ -9,7 +9,7 @@
     "tasks": "gulp --tasks"
   },
   "devDependencies": {
-    "cheerio": "^1.0.0-rc.3",
+    "cheerio": "^1.0.0-rc.6",
     "font-spider": "^1.3.5",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
