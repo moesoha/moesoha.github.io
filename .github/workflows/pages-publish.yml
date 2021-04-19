@@ -18,6 +18,8 @@ jobs:
           persist-credentials: false
       - name: Yarn install
         uses: borales/actions-yarn@v2.3.0
+        env:
+          NODE_ENV: development
         with:
           cmd: install
 
@@ -41,12 +43,12 @@ jobs:
           echo jin.sh > dist/CNAME
 
       - name: Deploy Chinese version
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          REPOSITORY_NAME: moesoha/moesoha.github.io
-          BRANCH: master
-          FOLDER: dist
+          token: ${{ secrets.ACCESS_TOKEN }}
+          repository-name: moesoha/moesoha.github.io
+          branch: master
+          folder: dist
 
       # clean up
       - name: Yarn clean
@@ -68,9 +70,9 @@ jobs:
           echo sohaj.in > dist/CNAME
 
       - name: Deploy English version
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          REPOSITORY_NAME: moesoha/sohaj.in
-          BRANCH: master
-          FOLDER: dist
+          token: ${{ secrets.ACCESS_TOKEN }}
+          repository-name: moesoha/sohaj.in
+          branch: master
+          folder: dist
