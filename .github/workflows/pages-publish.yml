@@ -8,45 +8,69 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: production
     steps:
+      # Preparing
       - name: Checkout
         uses: actions/checkout@v2
         with:
           persist-credentials: false
-
       - name: Yarn install
         uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install
-      - name: Yarn build
+
+      # Actions for Chinese page
+      - name: Yarn build for Chinese
         uses: borales/actions-yarn@v2.3.0
+        env:
+          COMPILE_LANG: zh
+          GOOGLE_ANALYTICS_ID: UA-83198456-4
         with:
           cmd: build
-    
-      - name: Prepare two language versions
+          
+      - name: Write CNAME file for Chinese
         run: |
-          cp -vr dist page-en && cp -vr dist page-zh
-          cd page-en
-          rm index.zh.html && mv index.en.html index.html
-          cd ..
-          cd page-zh
-          rm index.en.html && mv index.zh.html index.html
-          cd ..
-          echo "Files are prepared."
-          ls -lah dist page-en page-zh
-    
+          echo jin.sh > dist/CNAME
+
       - name: Deploy Chinese version
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           REPOSITORY_NAME: moesoha/moesoha.github.io
           BRANCH: master
-          FOLDER: page-zh
+          FOLDER: dist
+
+      # clean up
+      - name: Yarn clean
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: clean
+
+      # Actions for English page
+      - name: Yarn build for English
+        uses: borales/actions-yarn@v2.3.0
+        env:
+          COMPILE_LANG: en
+          GOOGLE_ANALYTICS_ID: UA-83198456-3
+        with:
+          cmd: build
+          
+      - name: Write CNAME file for English
+        run: |
+          echo sohaj.in > dist/CNAME
+
       - name: Deploy English version
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           REPOSITORY_NAME: moesoha/sohaj.in
           BRANCH: master
-          FOLDER: page-en
+          FOLDER: dist
 
+      # clean up
+      - name: Yarn clean
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: clean
