@@ -97,8 +97,8 @@ html, body {
 }
 
 h1 { font-size: 1.85rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.2rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.35rem; }
 h4 { font-size: 1.1rem; }
 h5 { font-size: 1rem; }
 h6 { font-size: .875rem; }
@@ -112,6 +112,15 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, ul:last-child, p:last-child, ul > li:last-child {
 	margin-bottom: 0;
 	padding-bottom: 0;
+}
+
+.main > h2 {
+	border-bottom: #ddd solid 2px;
+	margin-bottom: 0;
+}
+.main > dl {
+	margin-top: .75em;
+	margin-bottom: 6px;
 }
 
 a {
@@ -150,11 +159,47 @@ a:hover {
 	font-size: 1.2rem;
 }
 
-li {
-	margin: .5em 0;
+ul {
+	margin-left: .5em;
+	padding-left: 1em;
 }
-li > * > li {
+li {
 	margin: .125em 0;
+}
+
+dl {
+	padding: 0 1rem;
+}
+
+dl > dt {
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+dt > small {
+	font-weight: normal;
+}
+
+dl > dd {
+	margin-left: 1.25em;
+}
+dt + dd {
+	margin-left: 0;
+	color: #777;
+}
+
+dd + dt {
+	margin-top: 1em;
+}
+
+dt + dd::after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.pull-right {
+	float: right;
 }
 
 .fas, .fab {
