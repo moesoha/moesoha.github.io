@@ -1,4 +1,5 @@
 title: 金少海 | Soha Jin
+fonts-en-serif: fonts-zh-serif
 Birthday: 生日
 Personal Blog: 个人博客
 AS Number: AS 编号
@@ -22,8 +23,12 @@ A free and open-source online judge system.: 一个自由、开源的在线评�
 Oct. 2013 - Apr. 2018: 2013.10 - 2018.04
 Developer: 开发者
 "A search engine for problems across various online judge services, written with PHP, HTML, CSS, JavaScript.": 一个用于在多个在线评测系统的题库之间搜索题目的搜索引擎。使用 PHP、HTML、CSS、JavaScript 编写。
-"This competition is for inspiring high school students about STEM(Science, Technology, Engineering and Mathematics). To win the game, team should build a industrial robot with robust structure and intelligent program and defeat the opponent.": 这个比赛是为了启发高中生在 STEM（科学、技术、工程、数学）方面的思维成立的。为了赢得比赛，队伍必须构建一个具有可靠且稳定的结构、智能的程序的工业机器人，并在比赛中打败对面的机器人。
-"July 2016 - Apr. 2018, I took part in the competition as team member (software engineer) in Team 6385, 5453. Entered world championship in 2018 with Team 5453.": 在 2016 年 7 月至 2018 年 4 月，我先后作为 6385、5453 队的队员（软件工程师）参赛，并在 2018 年随 5453 在深圳赛区进入了世界锦标赛。
+"This competition is for inspiring high school students about STEM(Science, Technology, Engineering and Mathematics). To win the game, team should build a industrial robot with robust structure and intelligent program and defeat the opponent.":
+  这个比赛是为了启发高中生在
+  STEM（科学、技术、工程、数学）方面的思维成立的。为了赢得比赛，队伍必须构建一个具有可靠且稳定的结构、智能的程序的工业机器人，并在比赛中打败对面的机器人。
+"July 2016 - Apr. 2018, I took part in the competition as team member (software engineer) in Team 6385, 5453. Entered world championship in 2018 with Team 5453.":
+  在 2016 年 7 月至 2018 年 4 月，我先后作为 6385、5453 队的队员（软件工程师）参赛，并在 2018 年随 5453
+  在深圳赛区进入了世界锦标赛。
 "July 2018 - Present, I took part in the competition as software memtor in Team 5453, 7529. Entered world championship in 2019 with Team 7529.": 2018 年 7 月至今，我于 5453、7529 队作为软件导师指导队员参赛，并在 2019 年随 7529 在美国大北方赛区进入了世界锦标赛。
 I am also a contributor at WPILib which is an official essential library for writing robot codes for FRC.: 在过程中，也为比赛官方编写机器人程序的库，WPILib，做了不少贡献。
 Skill: 技能
