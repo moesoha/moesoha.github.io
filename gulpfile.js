@@ -17,7 +17,7 @@ const through = require('through2');
 const YAML = require('yaml');
 const fs = require('fs');
 
-const cleanUpPreviousBuild = () => src('./dist', { read: false }).pipe(clean());
+const cleanUpPreviousBuild = () => src('./dist', { read: false, allowEmpty: true }).pipe(clean());
 const cleanUpOriginalFonts = () => src('./dist/**/.font-spider', { read: false }).pipe(clean());
 const copyPublicFiles = () => src('./public/**').pipe(dest('./dist/'));
 const copyAssets = () => src('./assets/**').pipe(dest('./dist/assets/'));

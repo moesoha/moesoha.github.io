@@ -21,6 +21,12 @@ jobs:
         with:
           cmd: install
 
+      # clean up
+      - name: Yarn clean
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: clean
+
       # Actions for Chinese page
       - name: Yarn build for Chinese
         uses: borales/actions-yarn@v2.3.0
@@ -68,9 +74,3 @@ jobs:
           REPOSITORY_NAME: moesoha/sohaj.in
           BRANCH: master
           FOLDER: dist
-
-      # clean up
-      - name: Yarn clean
-        uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: clean
