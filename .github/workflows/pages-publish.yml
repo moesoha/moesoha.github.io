@@ -6,20 +6,22 @@ on:
       - source
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  deploy-zh:
     env:
-      NODE_ENV: production
+      COMPILE_LANG: zh
+      GOOGLE_ANALYTICS_ID: UA-83198456-4
+      DEPLOY_DOMAIN: jin.sh
+      GITHUB_REPOSITORY: moesoha/moesoha.github.io
+    runs-on: ubuntu-latest
     steps:
       # Preparing
       - name: Checkout
         uses: actions/checkout@v2
         with:
           persist-credentials: false
+
       - name: Yarn install
         uses: borales/actions-yarn@v2.3.0
-        env:
-          NODE_ENV: development
         with:
           cmd: install
 
@@ -29,26 +31,45 @@ jobs:
         with:
           cmd: clean
 
-      # Actions for Chinese page
-      - name: Yarn build for Chinese
+      # Build and Deploy
+      - name: Yarn build
         uses: borales/actions-yarn@v2.3.0
         env:
-          COMPILE_LANG: zh
-          GOOGLE_ANALYTICS_ID: UA-83198456-4
+          NODE_ENV: production
         with:
           cmd: build
           
-      - name: Write CNAME file for Chinese
+      - name: Write CNAME file
         run: |
-          echo jin.sh > dist/CNAME
+          echo $DEPLOY_DOMAIN > dist/CNAME
 
-      - name: Deploy Chinese version
+      - name: Deploy pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          repository-name: moesoha/moesoha.github.io
+          repository-name: ${{ env.GITHUB_REPOSITORY }}
           branch: master
           folder: dist
+
+  deploy-en:
+    env:
+      COMPILE_LANG: en
+      GOOGLE_ANALYTICS_ID: UA-83198456-3
+      DEPLOY_DOMAIN: sohaj.in
+      GITHUB_REPOSITORY: moesoha/sohaj.in
+    # JUST SIMPLE COPY & PASTE BELOW SINCE GITHUB DID NOT SUPPORT ANCHORS
+    runs-on: ubuntu-latest
+    steps:
+      # Preparing
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Yarn install
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install
 
       # clean up
       - name: Yarn clean
@@ -56,23 +77,22 @@ jobs:
         with:
           cmd: clean
 
-      # Actions for English page
-      - name: Yarn build for English
+      # Build and Deploy
+      - name: Yarn build
         uses: borales/actions-yarn@v2.3.0
         env:
-          COMPILE_LANG: en
-          GOOGLE_ANALYTICS_ID: UA-83198456-3
+          NODE_ENV: production
         with:
           cmd: build
           
-      - name: Write CNAME file for English
+      - name: Write CNAME file
         run: |
-          echo sohaj.in > dist/CNAME
+          echo $DEPLOY_DOMAIN > dist/CNAME
 
-      - name: Deploy English version
+      - name: Deploy pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          repository-name: moesoha/sohaj.in
+          repository-name: ${{ env.GITHUB_REPOSITORY }}
           branch: master
           folder: dist
