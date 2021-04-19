@@ -79,9 +79,8 @@ html, body {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: space-between;
-		border-bottom: 2px solid #ccc;
-		padding-top: 0;
-		padding-bottom: 1rem;
+		border-bottom: 2px dotted #ccc;
+		padding: 0 2rem 1rem;
 	}
 	
 	.container > .side > *:first-child {
@@ -92,7 +91,8 @@ html, body {
 	}
 
 	.container > .main {
-		line-height: 1.2;
+		padding: 1rem 2rem;
+		line-height: 1.4;
 	}
 }
 
@@ -167,6 +167,7 @@ li {
 	margin: .125em 0;
 }
 
+/* dl, dt, dd */
 dl {
 	padding: 0 1rem;
 }
@@ -184,15 +185,19 @@ dt > small {
 dl > dd {
 	margin-left: 1.25em;
 }
+dd + dd {
+	margin-top: .3em;
+}
 dt + dd {
+	margin-top: .2em;
 	margin-left: 0;
 	color: #777;
 }
-
 dd + dt {
 	margin-top: 1em;
 }
 
+/* pull right */
 dt + dd::after {
 	display: block;
 	content: "";
