@@ -11,7 +11,7 @@ jobs:
       COMPILE_LANG: zh
       GOOGLE_ANALYTICS_ID: UA-83198456-4
       DEPLOY_DOMAIN: jin.sh
-      GITHUB_REPOSITORY: moesoha/moesoha.github.io
+      DEPLOY_REPOSITORY: moesoha/moesoha.github.io
     runs-on: ubuntu-latest
     steps:
       # Preparing
@@ -47,7 +47,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          repository-name: ${{ env.GITHUB_REPOSITORY }}
+          repository-name: ${{ env.DEPLOY_REPOSITORY }}
           branch: master
           folder: dist
 
@@ -56,7 +56,7 @@ jobs:
       COMPILE_LANG: en
       GOOGLE_ANALYTICS_ID: UA-83198456-3
       DEPLOY_DOMAIN: sohaj.in
-      GITHUB_REPOSITORY: moesoha/sohaj.in
+      DEPLOY_REPOSITORY: moesoha/sohaj.in
     # JUST SIMPLE COPY & PASTE BELOW SINCE GITHUB DID NOT SUPPORT ANCHORS
     runs-on: ubuntu-latest
     steps:
@@ -93,6 +93,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          repository-name: ${{ env.GITHUB_REPOSITORY }}
+          repository-name: ${{ env.DEPLOY_REPOSITORY }}
           branch: master
           folder: dist
