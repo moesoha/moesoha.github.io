@@ -49,6 +49,7 @@ html, body {
 	}
 	
 	.container::after {
+		display: block;
 		clear: both;
 		content: '';
 	}
@@ -200,11 +201,24 @@ dd + dt {
 /* pull right */
 dt + dd::after {
 	display: block;
-	content: "";
+	content: '';
 	clear: both;
+}
+dt > .pull-right {
+	line-height: 1.875rem;
+}
+dd > .pull-right {
+	line-height: 1.5rem;
 }
 .pull-right {
 	float: right;
+	vertical-align: bottom;
+}
+.pull-right::after {
+	display: inline-block;
+	content: '';
+	vertical-align: bottom;
+	height: 100%;
 }
 
 .fas, .fab {
