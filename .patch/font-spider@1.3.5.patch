@@ -1,0 +1,13 @@
+diff --git a/src/compressor/index.js b/src/compressor/index.js
+index ac6ea916ede26d422be117b0b96c2884657e1cde..1916aceb33eb0e0dcfb891375828d5c88db51e84 100644
+--- a/src/compressor/index.js
++++ b/src/compressor/index.js
+@@ -138,7 +138,7 @@ Compress.prototype = {
+ 
+         fontmin.use(Fontmin.glyph({
+             trim: false,
+-            text: webFont.chars || '#' // 传入任意字符避免 fontmin@0.9.5 BUG
++            text: webFont.chars + ' '
+         }));
+ 
+ 

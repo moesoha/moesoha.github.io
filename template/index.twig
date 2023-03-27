@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="{{ _lang }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="./assets/fonts.css" charset="utf-8">
+		<link rel="stylesheet" href="./assets/hp.soha.css" charset="utf-8">
+		<style type="text/css">h0 { display: none; }</style>
+	</head>
+	<body class="fonts-serif">
+		<div class="container">
+			<div class="side">
+				<img class="avatar" src="./assets/Eric-201803.200px.jpg" />
+				<div>
+					<h0>🍋Soha ❤ 🍓Mori</h0><!-- I miss you soooooooooo much. TAT 还能和你继续写故事吗？ -->
+					{% if _lang == 'en' %}
+						<h1 class="name fonts-serif" title="or Shaohai Jin">Soha Jin</h1>
+						<b class="name-alt fonts-zh-serif">金少海</b>
+					{% elseif _lang == 'zh' %}
+						<h1 class="name fonts-serif">金少海</h1>
+						<b class="name-alt fonts-en-serif" title="或 Shaohai Jin">Soha Jin</b>
+					{% endif %}
+				</div>
+				<div class="contacts fonts-sans">
+					<span title="{{ 'Birthday'|trans }}">
+						<i class="fas fa-birthday-cake"></i>
+						{% if _lang == 'en' %} <span>Mar. 2000</span>
+						{% elseif _lang == 'zh' %} <span>2000-03</span>
+						{% endif %}
+					</span>
+					<span title="{{ 'PGP Key'|trans }}">
+						<i class="fas fa-key"></i>
+						<a href="https://jin.sh/pgp.asc">5089 1703 e07e 50aa</a>
+					</span>
+					<span title="{{ 'E-mail'|trans }}">
+						<i class="fas fa-envelope"></i>
+						soha@lohu.info
+					</span>
+					<span title="GitHub">
+						<i class="fab fa-github"></i>
+						<a href="https://github.com/moesoha">moesoha</a>
+					</span>
+					<span class="show-on-print">
+						<i class="fas fa-home"></i>
+						{% if _lang == 'en' %}
+							<a href="https://sohaj.in">https://sohaj.in</a>
+						{% elseif _lang == 'zh' %}
+							<a href="https://jin.sh">https://jin.sh</a>
+						{% endif %}
+					</span>
+					<span title="{{ 'Personal Blog'|trans }}" class="hide-on-print">
+						<i class="fas fa-home"></i>
+						<a href="https://soha.moe">https://soha.moe</a>
+					</span>
+					<span title="{{ 'AS Number'|trans }}" class="hide-on-print">
+						<i class="fas fa-ethernet"></i>
+						<a href="https://net.soha.space/{{ _lang == 'zh' ? 'index.zh.html' : '' }}">AS209306</a>
+					</span>
+					<span title="{{ 'Callsign'|trans }}" class="hide-on-print">
+						<i class="fas fa-broadcast-tower"></i>
+						BG5DTR
+					</span>
+					<span title="Telegram" class="hide-on-print">
+						<i class="fab fa-telegram"></i>
+						<a href="https://t.me/moesoha">moesoha</a>
+					</span>
+					<span title="Twitter" class="hide-on-print">
+						<i class="fab fa-twitter"></i>
+						<a href="https://twitter.com/sohasaikou">sohasaikou</a>
+					</span>
+					<!-- Instagram account is banned by Zuckerberg without any reason -->
+					<!--span title="Instagram" class="hide-on-print">
+						<i class="fab fa-instagram"></i>
+						<a href="https://instagram.com/awesomesoha">awesomesoha</a>
+					</span-->
+				</div>
+				<div class="more-link">
+					{% if _lang == 'en' %} {# TODO: i18nSwitch by domain #}
+						<a href="https://jin.sh" class="fonts-zh-serif">中文</a>
+					{% elseif _lang == 'zh' %}
+						<a href="https://sohaj.in" class="fonts-en-serif">English</a>
+					{% endif %}
+				</div>
+			</div>
+			<div class="main">
+				<h2>{% trans %}Experience{% endtrans %}</h2>
+				<dl>
+					<dt>
+						<span>{% trans %}Luogu{% endtrans %}</span>
+						<small class="pull-right">{% trans %}June 2013 - Present{% endtrans %}</small>
+					</dt>
+					<dd>
+						<span>{% trans %}Full-stack and operations engineer{% endtrans %}</span>
+						<small class="pull-right"><a href="https://www.luogu.com.cn">https://www.luogu.com.cn</a></small>
+					</dd>
+					<dd></dd>
+					<dd>{% trans %}
+						Luogu is an online judge website which is well-known in China. One of its related products, Luogu Class, is an online education service, provides interactive or video lessons about programming and algorithms online.
+					{% endtrans %}</dd>
+
+					<dt>
+						<span>{% trans %}Tianhai Global Network (AS4842){% endtrans %}</span>
+						<small class="pull-right">{% trans %}Apr. 2016 - Present{% endtrans %}</small>
+					</dt>
+					<dd>{% trans %}Network Operator{% endtrans %}</dd>
+					<dd>{% trans %}
+						The network is settled as a research network at first. Currently it has PoPs in Asia, Europe and America, connected to Internet exchange points like HKIX and KleyReX.
+					{% endtrans %}</dd>
+
+					<dt>
+						<span>Vijos</span>
+						<small class="pull-right">{% trans %}Nov. 2018 - Present{% endtrans %}</small>
+					</dt>
+					<dd>
+						<span>{% trans %}Core Contributor{% endtrans %}</span>
+						<small class="pull-right"><a href="https://github.com/vijos/vj4">https://github.com/vijos/vj4</a></small>
+					</dd>
+					<dd>{% trans %}A free and open-source online judge system.{% endtrans %}</dd>
+
+					<dt>
+						<span>OI in Hand</span>
+						<small class="pull-right">{% trans %}Oct. 2013 - Apr. 2018{% endtrans %}</small>
+					</dt>
+					<dd>{% trans %}Developer{% endtrans %}</dd>
+					<dd>{% trans %}
+						A search engine for problems across various online judge services, written with PHP, HTML, CSS, JavaScript.
+					{% endtrans %}</dd>
+
+					<dt>FIRST Robotics Competition (FRC)</dt>
+					<dd></dd>
+					<dd>{% trans %}
+						This competition is for inspiring high school students about STEM(Science, Technology, Engineering and Mathematics). To win the game, team should build a industrial robot with robust structure and intelligent program and defeat the opponent.
+					{% endtrans %}</dd>
+					<dd>
+						<ul>
+							<li>{% trans %}July 2016 - Apr. 2018, I took part in the competition as team member (software engineer) in Team 6385, 5453. Entered world championship in 2018 with Team 5453.{% endtrans %}</li>
+							<li>{% trans %}July 2018 - Present, I took part in the competition as software memtor in Team 5453, 7529. Entered world championship in 2019 with Team 7529.{% endtrans %}</li>
+							<li>{% trans %}I am also a contributor at WPILib which is an official essential library for writing robot codes for FRC.{% endtrans %}</li>
+						</ul>
+					</dd>
+				</dl>
+
+				<h2>{% trans %}Education{% endtrans %}</h2>
+				<dl>
+					<dt>
+						<span>{% trans %}Wenzhou University of Technology{% endtrans %}</span>
+						<small class="pull-right">{% trans %}Sept. 2018 - June 2022{% endtrans %}</small>
+					</dt>
+					<dd></dd>
+					<dd><i>{% trans %}Former Wenzhou University Oujiang College (Until 2021){% endtrans %}</i></dd>
+					<dd>{% trans %}Bachelor of Engineering in Computer Science &amp; Technology{% endtrans %}</dd>
+				</dl>
+
+				<h2>{% trans %}Skill{% endtrans %}</h2>
+				<dl>
+					<dt>{% trans %}Human language (excl. dialects){% endtrans %}</dt>
+					<dd></dd>
+					<dd>
+						<ul>
+							<li>{% trans %}Chinese / Mandarin <i>(first language)</i>{% endtrans %}</li>
+							<li>{% trans %}English <i>(2004)</i>{% endtrans %}</li>
+						</ul>
+					</dd>
+
+
+					<dt>{% trans %}Programming language{% endtrans %}</dt>
+					<dd></dd>
+					<dd>
+						<ul>
+							<li>PHP <i>(2013)</i></li>
+							<li>Rust <i>(2017)</i></li>
+							<li>JavaScript <i>(2013)</i></li>
+							<li>TypeScript <i>(2018)</i></li>
+							<li>C# <i>(2016)</i></li>
+							<li>Python 3 <i>(2016)</i></li>
+							<li class="hide-on-print">CSS <i>(2014)</i>, HTML <i>(2013)</i>, Nix <i>(2021)</i>, Kotlin <i>(2020)</i>, SQL <i>(2013)</i>, C <i>(2015)</i>, Python 2 <i>(2008)</i>, C++ <i>(2015)</i>, Pascal <i>(2009)</i>, Go <i>(2017)</i>, Lua <i>(2018)</i>, Java <i>(2018)</i>, Ruby <i>(2016)</i>, Visual Basic <i>(2015)</i>, PowerShell <i>(2017)</i>, Shell <i>(2014)</i>, LOGO <i>(2007)</i>, Windows Batch File <i>(2004)</i>, 易语言 <i>(2010)</i></li>
+							<li class="show-on-print"><i>{% trans %}Others are omitted in print version.{% endtrans %}</i></li>
+						</ul>
+					</dd>
+				</dl>
+				<i>{% trans %}Ordered by proficiency.{% endtrans %}</i>
+			</div>
+		</div>
+	</body>
+</html>

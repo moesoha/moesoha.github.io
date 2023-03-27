@@ -21,9 +21,15 @@
 	font-weight: bold;
 	font-style: normal;
 }
-.fonts-en-serif { font-family: Georgia, 'Times New Roman', Times, serif; }
-.fonts-en-sans { font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
-.fonts-zh-serif { font-family: 'Source Han Serif CN', Georgia, 'Times New Roman', Times, serif; }
+[lang="en"] .fonts-serif, .fonts-en-serif {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+[lang="en"] .fonts-sans, .fonts-en-sans {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+[lang="zh"] .fonts-serif, .fonts-zh-serif {
+	font-family: 'Source Han Serif CN', Georgia, 'Times New Roman', Times, serif;
+}
 
 /* FONT AWESOME ICONS */
 @font-face {
