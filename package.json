@@ -17,6 +17,6 @@
     "gulp-font-spider": "^0.3.6",
     "gulp-htmlmin": "^5.0.1",
     "through2": "^4.0.2",
-    "yaml": "^1.10.2"
+    "yaml": "^2.2.2"
   }
 }
