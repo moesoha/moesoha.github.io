@@ -9,7 +9,7 @@ jobs:
   deploy-zh:
     env:
       COMPILE_LANG: zh
-      GOOGLE_ANALYTICS_ID: UA-83198456-4
+      GOOGLE_ANALYTICS_ID: G-VKZ6EZDQWY
       DEPLOY_DOMAIN: jin.sh
       DEPLOY_REPOSITORY: moesoha/moesoha.github.io
     runs-on: ubuntu-latest
@@ -54,7 +54,7 @@ jobs:
   deploy-en:
     env:
       COMPILE_LANG: en
-      GOOGLE_ANALYTICS_ID: UA-83198456-3
+      GOOGLE_ANALYTICS_ID: G-5GNRCDHKBS
       DEPLOY_DOMAIN: sohaj.in
       DEPLOY_REPOSITORY: moesoha/sohaj.in
     # JUST SIMPLE COPY & PASTE BELOW SINCE GITHUB DID NOT SUPPORT ANCHORS
