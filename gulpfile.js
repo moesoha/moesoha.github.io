@@ -2,6 +2,7 @@ const config = {
 	langs: ['zh', 'en'],
 	langsKeyToGenerate: ['zh'],
 	compileLang: process.env.COMPILE_LANG || 'zh',
+	compileId: process.env.COMPILE_ID || '',
 	i18nPath: './i18n/',
 	i18nAttrs: ['title', 'class'],
 	isProduction: process.env.NODE_ENV === 'production'
@@ -43,7 +44,7 @@ const htmlCompile = () => src('./*.html')
 				lang = YAML.parse(fs.readFileSync(config.i18nPath + getLangFileName(file.basename, config.compileLang), 'utf-8'));
 			} catch (_) {}
 			const $ = cheerio.load(file.contents.toString(), { decodeEntities: false });
-			const i18nElements = $(['[i18n]', '[i18n-if]', '[i18n-key]', ...config.i18nAttrs.map(s => `[i18n-${s}]`)].join(',')).map((_, e) => e).get();
+			const i18nElements = $(['[i18n]', '[i18n-if]', '[i18n-id]', '[i18n-key]', ...config.i18nAttrs.map(s => `[i18n-${s}]`)].join(',')).map((_, e) => e).get();
 			for(let i in i18nElements) {
 				const e = i18nElements[i];
 				let val;
@@ -71,6 +72,14 @@ const htmlCompile = () => src('./*.html')
 				if (typeof $(e).attr('i18n-if') === 'string') {
 					if ($(e).attr('i18n-if') === config.compileLang) {
 						$(e).removeAttr('i18n-if');
+					} else {
+						$(e).remove();
+					}
+				}
+
+				if (typeof $(e).attr('i18n-id') === 'string') {
+					if ($(e).attr('i18n-id').includes(config.compileId)) {
+						$(e).removeAttr('i18n-id');
 					} else {
 						$(e).remove();
 					}
