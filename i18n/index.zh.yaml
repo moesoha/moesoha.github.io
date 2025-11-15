@@ -1,38 +1,65 @@
+# source
 title: 金少海 | Soha Jin
+meta-desc: 这是金少海（Soha Jin）的个人主页（或者叫简历）。
 fonts-en-serif: fonts-zh-serif
+
+# metadata
 Birthday: 生日
 Personal Blog: 个人博客
 AS Number: AS 编号
 Callsign: 呼号
-Open Source Contribution: 开源贡献
+
+# 教育经历
 Education: 教育经历
-Wenzhou University of Technology: 温州理工学院
+Wenzhou University Oujiang College: 温州大学瓯江学院
 Sept. 2018 - June 2022: 2018.09 - 2022.06
-Former Wenzhou University Oujiang College (Until 2021): 前温州大学瓯江学院（至 2021 年）
+Present Wenzhou University of Technology (Since 2022): 现温州理工学院（2022 年起）
 Bachelor of Engineering in Computer Science &amp; Technology: 计算机科学与技术专业工学学士学位
+
 Experience: 项目经历
+
+
+# 项目经历 - 洛谷
 Luogu: 洛谷
 June 2013 - Present: 2013 年 6 月至今
 Full-stack and operations engineer: 全栈和运维工程师
-"Luogu is an online judge website which is well-known in China. One of its related products, Luogu Class, is an online education service, provides interactive or video lessons about programming and algorithms online.": 洛谷是国内知名的程序在线评测网站。洛谷网校作为其产品之一，提供了有关编程和算法的交互课程与视频课程。
+"Luogu is a well-known online judge platform in China, providing a wealth of practice problems and learning resources for various algorithmic competitions. As one of its products, Luogu Class offers interactive and video courses on programming and algorithms.":
+    洛谷是国内知名的程序在线评测网站，为各类算法竞赛提供丰富的练习题库和学习资源。洛谷网校作为其产品之一，提供了有关编程和算法的交互课程与视频课程。
+
+# 项目经历 - AS4842
 Tianhai Global Network (AS4842): 天海全球计算机网 (AS4842)
 Apr. 2016 - Present: 2016 年 4 月至今
 Network Operator: 网络操作者
-"The network is settled as a research network at first. Currently it has PoPs in Asia, Europe and North America, connected to Internet exchange points like HKIX, Seattle IX (SIX), and KleyReX.": 这个网络最初作为研究型网络而建设。目前其在亚洲、欧洲、北美洲均有部署出现点，并连接到了 HKIX、Seattle IX（SIX）、KleyReX 等互联网交换点。
+"The network is settled as a research network at first by Tianhai InfoTech. It has PoPs in Asia, Europe and North America, connected to IXPs (Internet exchange points) like HKIX, Seattle IX (SIX), and KleyReX.":
+    这个网络最初由天海信息科技作为研究型网络而建设。目前其在亚洲、欧洲、北美洲均有部署出现点（PoP），并连接到
+    HKIX、Seattle IX（SIX）、KleyReX 等互联网交换点（IXP）和其他网络进行对等互联。
+
+# 项目经历 - 开源
+Open Source Contribution: 开源贡献
+
+# 项目经历 - Vijos
 Nov. 2018 - Present: 2018 年 11 月至今
 Core Contributor: 核心开发者
 A free and open-source online judge system.: 一个自由、开源的在线评测系统。
+
+# 项目经历 - OI in Hand
 Oct. 2013 - Apr. 2018: 2013.10 - 2018.04
-Developer: 开发者
-"A search engine for problems across various online judge services, written with PHP, HTML, CSS, JavaScript.": 一个用于在多个在线评测系统的题库之间搜索题目的搜索引擎。使用 PHP、HTML、CSS、JavaScript 编写。
-"This competition is for inspiring high school students about STEM(Science, Technology, Engineering and Mathematics). To win the game, team should build a industrial robot with robust structure and intelligent program and defeat the opponent.":
-  这个比赛是为了启发高中生在
-  STEM（科学、技术、工程、数学）方面的思维成立的。为了赢得比赛，队伍必须构建一个具有可靠且稳定的结构、智能的程序的工业机器人，并在比赛中打败对面的机器人。
+Maintainer: 维护者
+A search engine for problems across various online judge services around the world. As a product developed by Tianhai InfoTech.:
+    一个索引了全世界多个在线评测系统题库的搜索引擎。作为天海信息科技的产品发布。
+
+# 项目经历 - FRC
+"This competition is for inspiring high school students about STEM (Science, Technology, Engineering and Mathematics). To win the game, team should build a industrial robot with robust structure and intelligent program and defeat the opponent.":
+    这个比赛的目的是启发高中生在
+    STEM（科学、技术、工程、数学）方面的思维。为了赢得比赛，队伍必须构建一个具有可靠且稳定的结构、智能的程序的工业机器人，并在比赛中打败对面的机器人。
 "July 2016 - Apr. 2018, I took part in the competition as team member (software engineer) in Team 6385, 5453. Entered world championship in 2018 with Team 5453.":
-  在 2016 年 7 月至 2018 年 4 月，我先后作为 6385、5453 队的队员（软件工程师）参赛，并在 2018 年随 5453
-  在深圳赛区进入了世界锦标赛。
-"July 2018 - Present, I took part in the competition as software memtor in Team 5453, 7529, 8214. Entered world championship in 2019 with Team 7529.": 2018 年 7 月至今，我于 5453、7529、8214 队作为软件导师指导队员参赛，并在 2019 年随 7529 在美国大北方赛区进入了世界锦标赛。
-I am also a contributor at WPILib which is an official essential library for writing robot codes for FRC.: 在过程中，也为比赛官方编写机器人程序的库，WPILib，做了不少贡献。
+    在 2016 年 7 月至 2018 年 4 月，我先后作为 6385、5453 队的队员（软件工程师）参赛，并在 2018 年随 5453 在深圳赛区进入了世界锦标赛。
+"July 2018 - Present, I took part in the competition as software mentor in Team 5453, 7529, 8214.":
+    2018 年 7 月至今，我作为 5453、7529、8214 队的软件导师参与。
+I am also a contributor at WPILib which is an official essential library for writing robot codes for FRC.:
+    在过程中，也为比赛官方编写机器人程序的库，WPILib，做了不少贡献。
+
+# 技能
 Skill: 技能
 Human language (excl. dialects): 人类语言（不包括方言）
 Mandarin / Chinese <i>(first language)</i>: 普通话 / 中文<i>（母语）</i>
